@@ -1,9 +1,8 @@
 package application;
 
-
-
-/**
- *  TOPICOS COMPLEMENTARES DE JAVA THREAD
+/**@author LUCAS ROCHA DOS SANTOS
+ * @since 1.0
+ * TOPICOS COMPLEMENTARES DE JAVA THREAD
  * */
 public class Program_02 implements Runnable{
     
@@ -16,11 +15,12 @@ public class Program_02 implements Runnable{
 	}
 	
 	public static void main(String[] args) {
-           Runnable teste01 = new Program_02("ANNA CLARA", 1500L);
+           
+		Runnable teste01 = new Program_02("ANNA CLARA", 1500L);
            Runnable teste02 = new Program_02("BERNARDINO DA ROCHA", 2500L);
            
-           teste01.run();
-           teste02.run();
+           new Thread(teste01).start();
+           new Thread(teste02).start();
 	}
 
 	@Override
@@ -30,7 +30,6 @@ public class Program_02 implements Runnable{
 			try {
 				Thread.sleep(this.time);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

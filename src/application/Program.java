@@ -7,7 +7,7 @@ package application;
  * <p> CURSO UNIVERSIDADE XTI DE 2011 ONDE O INSTRUITOR ENSINA UTILIZAR THREADS </p>
  * 
  * */
-public class Program extends Thread implements Runnable{
+public class Program extends Thread{
 	
 	String palavra;
 	Long tempo;
